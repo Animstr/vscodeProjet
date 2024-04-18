@@ -34,4 +34,7 @@ let isEnter = true,
 
 /* isEnter;
 isExit; */
-console.log(!isEnter && !isExit)
+console.log(!isEnter && !isExit);
+
+Array("hello");
+console.log(array);
