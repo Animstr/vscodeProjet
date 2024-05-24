@@ -64,11 +64,11 @@ switch (chicken) {
         console.log('try again');
         break;
 } */
-console.log(Nan || 2 || undefined);
+/* console.log(Nan || 2 || undefined);
 console.log( 25 || null && !3 );
 console.log( NaN || null || !3 || undefined || 5);
 console.log( NaN || null && !3 && undefined || 5);
-console.log( 5 === 5 && 3 > 1 || 5);
+console.log( 5 === 5 && 3 > 1 || 5); */
 
 /* const hamburger = 3;
 const fries = 3;
@@ -78,13 +78,13 @@ const nuggets = 2;
 
 console.log(hamburger === 3 && cola || fries === 3 && nuggets) */
 
-let hamburger = '';
+/* let hamburger = '';
 const fries = NaN;
 const cola = 0;
 const nuggets = 2;
 
 
-consolr.log(hamburger || cola || fries === 3 || nuggets)
+consolr.log(hamburger || cola || fries === 3 || nuggets) */
 
 /* let i =69;
 
@@ -107,7 +107,7 @@ for(let i = 12; i > 0; i--) {
     console.log(i);
 } */
 
-let string = '';
+/* let string = '';
 const column = 10;
 
 for( let i = 1; i < column; i++) {
@@ -118,4 +118,230 @@ for( let i = 1; i < column; i++) {
 
     string += '\n';
 }
-console.log(string);
+console.log(string); */
+
+/* let multiplication;
+let sum;
+
+function firstTest(a, b) {
+
+    multiplication = a * b;
+    sum = a + b;
+    return a - b;
+
+}
+
+firstTest(2, 7);
+
+console.log(multiplication);
+console.log(firstTest(6, 10));
+
+let firstTest = (a, b) => {
+    let c = 2 * a - b;
+    return c;
+
+};
+
+console.log(firstTest(3, 5)) */
+
+/* function exchsngeMoney (ruMoney, value) {
+    return ruMoney / value;
+}
+
+let euroExchange = exchsngeMoney(500, 90) + ' eur';
+
+console.log(euroExchange); */
+
+/* const textPropertyTest = 'Math is not a problem';
+
+console.log(textPropertyTest.length);
+
+console.log(textPropertyTest.toLowerCase()); */
+
+/* const textMethodsTest = 'My name is Daniil';
+
+console.log(textMethodsTest.indexOf('M'));
+console.log(textMethodsTest.slice(3, 7));
+console.log(textMethodsTest.substring(11));
+console.log(textMethodsTest.substr(3, 10)); */
+
+/* const num = 13.69;
+
+console.log(Math.round(num));
+
+const test = "185.67px";
+
+console.log(parseInt(test));
+console.log(parseFloat(test)); */
+
+/* function ucFirst (str) {
+    return str[0].toUpperCase() + str.slice(1);
+} */
+
+/* console.log(ucFirst('daniil'));
+
+function antiSpam (nikname) {
+    nikname = nikname.toLowerCase();
+
+    if (nikname.includes('viagra') || nikname.includes('xxx')) {
+        console.log( `${nikname} === true`);
+    } else {
+        console.log(`${nikname} === falls`);
+    };
+}
+
+console.log(antiSpam('XxX sex Toys'));
+
+let name = 'hello';
+
+console.log(name.toUpperCase()); */
+
+/* const objectFirstLesson = {
+    date: '05.05.2024',
+    name: 'Daniil',
+    age: 21,
+    gender: 'male',
+    hobbies: {
+        first: 'IT',
+        second: 'Video games',
+        third: 'Watching YouTube'
+    }
+}
+
+let {first, second, third} = objectFirstLesson.hobbies;
+
+console.log(first)
+
+console.log(Object.keys(objectFirstLesson).length);
+
+let counter = 0;
+
+for (let key in objectFirstLesson) {
+
+    if (typeof(objectFirstLesson[key]) === 'object') {
+
+        for (let i in objectFirstLesson[key]) {
+            console.log(`Подсвойство ${i} имеет значение ${objectFirstLesson[key][i]}`);
+            counter++;
+        }
+    } else {
+        console.log(`Свойство ${key} имеет значение ${objectFirstLesson[key]}`);
+        counter++;
+    }
+}
+console.log(counter);
+delete objectFirstLesson.date;
+
+console.log(objectFirstLesson); */
+
+/* const arr = [1, 5, 28, 32, 75];
+
+arr.forEach(function (value, i, arr) {
+    console.log(`На ${i} месте находится элемент ${value} в массиве ${arr}`);
+}); */
+
+/* const red = prompt('Назови 3 любые книги через запятую', '');
+let arr = red.split(', ');
+let str = arr.join(';');
+console.log(str); */
+
+/* let obj = { 
+    a:'we',
+    b:'qw'
+};
+
+/* let objCopy = {...obj, c:'hello'}; */ 
+
+/* console.log(obj);
+console.log(objCopy); 
+
+ function copy(mainObj) {
+    let objCopy = {};
+
+    let key
+    for(key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+    return objCopy;
+}
+
+let newObjOne = copy(obj); 
+
+newObjOne.b = 10;
+
+let newObjTwo = Object.assign({}, obj);
+newObjTwo.b = 'fuck';
+
+ console.log(newObjOne);
+ console.log(obj);
+ console.log(newObjTwo); */
+/* 
+const prototypeObject = {
+    private: true,
+    hsv:'(92, 34, 10)',
+};
+
+const secondObject = Object.create(prototypeObject);
+
+/* Object.setPrototypeOf(secondObject, prototypeObject); 
+
+console.log(secondObject.hsv); */
+
+/* const arr = [58, 32, 1, 24, 49, 21],
+    sorted = arr.sort(sotingMassive);
+
+function sotingMassive(a, b) {
+    return a - b;
+}
+
+console.log(sorted); */
+
+/* let arr = [1, 2, 3];
+
+arr.forEach(function(value, i, mass) {
+    console.log(`элемент ${value} под номером ${i} в массиве из данных:${mass}`);
+});
+
+console.log(typeof([] + false)); */
+
+/*  const webCallback = document.getElementsByTagName('button'); */
+
+/*console.log(webCallback[0]);
+
+const anotherWebCallback = [1, 2, 3];
+
+anotherWebCallback.forEach(item => {
+    console.log(item);
+});
+console.log(anotherWebCallback); */
+
+/* const crcl = document.querySelector('.circle');
+
+webCallback[0].style.width = '100px';
+
+const div = document.createElement('div');
+
+div.style.color = 'black';
+
+div.after(crcl);
+
+document.querySelectorAll('button')[1].innerHTML = '<h1>Hello</h1>' */
+
+const btn = document.querySelector('button'),
+    link = document.querySelector('a');
+let i = 0;
+
+ function btnEvent(e) {
+    console.log(e.target);
+    i++;
+    if (i == 2) {
+        btn.removeEventListener('mouseenter', btnEvent);
+    }
+}
+
+btn.addEventListener('mouseenter', btnEvent);
+link.addEventListener('click', e => {
+    e.preventDefault();
+
+    alert('it was a scam bruh');
+})
