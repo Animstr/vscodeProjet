@@ -327,7 +327,7 @@ div.after(crcl);
 
 document.querySelectorAll('button')[1].innerHTML = '<h1>Hello</h1>' */
 
-const btn = document.querySelector('button'),
+/* const btn = document.querySelector('button'),
     link = document.querySelector('a');
 let i = 0;
 
@@ -343,5 +343,108 @@ btn.addEventListener('mouseenter', btnEvent);
 link.addEventListener('click', e => {
     e.preventDefault();
 
-    alert('it was a scam bruh');
-})
+    e.HTML = '<a hover="https://github.com/Animstr/vscodeProjet"></a>';
+}) */
+
+// reqursion
+
+/* function pow(x, n) {
+    if(n === 1) {
+        return x;
+    } else {
+        return x * pow(x, n - 1);
+    }
+};
+console.log(pow(2, 5)); */
+
+let students = {
+    js: [
+        {
+            name: 'John',
+            progress: 100
+        }, {
+            name: 'Ivan',
+            progress: 60
+        }
+    ],
+    html: {
+        basic:[
+            {
+                name: 'Peter',
+                progress: 20
+            }, {
+                name: 'Ann',
+                progress: 18
+            }
+        ],
+        pro: [{
+            name:'Sam',
+            progress: 10
+        }],
+        ultra: {
+            highQualety: [{
+                name: 'Ann',
+                progress: 99},
+                {name: 'Ann',
+                progress: 28}
+            ],
+            lowQualety: [
+                {name: 'Ann',
+                progress: 12},
+                {name: 'Ann',
+                progress: 0}
+            ]
+        }
+    }
+};
+
+/* function getTotalProgressByIteration(data) {
+    let total = 0;
+    let students = 0;
+
+    for ( let course of Object.values(data)) {
+        if (Array.isArray(course)) {
+            students += course.length;
+            for (let i = 0; i < course.length; i++) {
+                total += course[i].progress;
+            }
+        } else {
+            for ( let objectCourse of Object.values(course)) {
+                students += objectCourse.length;
+                for (let k = 0; k < objectCourse.length; k++) {
+                    total += objectCourse[k].progress; 
+                }
+            }
+        }
+    }
+
+    return total / students;
+}
+
+console.log(getTotalProgressByIteration(students)); */
+
+function getTotalProgressByRecusion(data) {
+    if (Array.isArray(data)) {
+        let total = 0;
+
+            for (let i = 0; i < data.length; i++) {
+                total += data[i].progress;
+            }
+
+        return [total, data.length];    
+    } else {
+        let total = [0, 0];
+
+        for (let objectData of Object.values(data)) {
+            const objectDataArr = getTotalProgressByRecusion(objectData);
+            total[0] += objectDataArr[0];
+            total[1] += objectDataArr[1];
+        }
+
+        return total;
+    }
+};
+
+const result = getTotalProgressByRecusion(students);
+
+console.log(result[0]/result[1]);
